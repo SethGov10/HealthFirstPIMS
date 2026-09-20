@@ -16,8 +16,9 @@ public class ManageUsers extends javax.swing.JFrame {
      * Creates new form ManageUsers
      */
     public ManageUsers() {
-        initComponents();
-    }
+    initComponents();
+    loadUsers();
+  }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,25 +29,330 @@ public class ManageUsers extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        cmbRole = new javax.swing.JComboBox<>();
+        txtPassword = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtFullName = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
+        btnAddUser = new javax.swing.JButton();
+        btnDeleteUser = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblUsers = new javax.swing.JTable();
+        textPassword = new javax.swing.JTextField();
+        ComboRole = new javax.swing.JComboBox<>();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        cmbRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Cashier" }));
+        cmbRole.addActionListener(this::cmbRoleActionPerformed);
+
+        txtPassword.addActionListener(this::txtPasswordActionPerformed);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("USER MANAGEMENT");
+
+        jLabel2.setText("Full Name:");
+
+        jLabel3.setText("Username:");
+
+        jLabel4.setText("Password:");
+
+        jLabel5.setText("Role:");
+
+        btnAddUser.setText("ADD USER");
+        btnAddUser.addActionListener(this::btnAddUserActionPerformed);
+
+        btnDeleteUser.setText("DELETE USER");
+        btnDeleteUser.addActionListener(this::btnDeleteUserActionPerformed);
+
+        btnClear.setText("CLEAR ");
+        btnClear.addActionListener(this::btnClearActionPerformed);
+
+        btnBack.setText("BACK");
+        btnBack.addActionListener(this::btnBackActionPerformed);
+
+        tblUsers.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(tblUsers);
+
+        ComboRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cashier" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnAddUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(btnDeleteUser)
+                .addGap(27, 27, 27)
+                .addComponent(btnClear)
+                .addGap(18, 18, 18)
+                .addComponent(btnBack)
+                .addGap(739, 739, 739))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel3)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel4)))
+                            .addComponent(jLabel2))
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                            .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textPassword)
+                            .addComponent(txtFullName)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(312, 312, 312)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(textPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(ComboRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBack)
+                    .addComponent(btnClear)
+                    .addComponent(btnDeleteUser)
+                    .addComponent(btnAddUser))
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void cmbRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbRoleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbRoleActionPerformed
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
+
+    private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
+        String fullName = txtFullName.getText().trim();
+String username = txtUsername.getText().trim();
+String password = textPassword.getText().trim();
+
+if (fullName.isEmpty() || username.isEmpty() || password.isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Please fill in all fields."
+    );
+    return;
+}
+
+String sql = "INSERT INTO users (username, password, role, full_name) "
+        + "VALUES (?, ?, 'Cashier', ?)";
+
+try (
+    java.sql.Connection con = DBConnection.getConnection();
+    java.sql.PreparedStatement pst = con.prepareStatement(sql)
+) {
+
+    pst.setString(1, username);
+    pst.setString(2, password);
+    pst.setString(3, fullName);
+
+    pst.executeUpdate();
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Cashier account added successfully!"
+    );
+
+    loadUsers();
+
+    txtFullName.setText("");
+    txtUsername.setText("");
+    textPassword.setText("");
+
+} catch (java.sql.SQLException e) {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Could not add user:\n" + e.getMessage()
+    );
+}
+    }//GEN-LAST:event_btnAddUserActionPerformed
+
+    private void btnDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteUserActionPerformed
+        int selectedRow = tblUsers.getSelectedRow();
+
+if (selectedRow == -1) {
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Please select a user from the table first."
+    );
+    return;
+}
+
+int userId = Integer.parseInt(
+        tblUsers.getValueAt(selectedRow, 0).toString()
+);
+
+String username = tblUsers.getValueAt(selectedRow, 2).toString();
+
+int confirm = javax.swing.JOptionPane.showConfirmDialog(
+        this,
+        "Are you sure you want to delete cashier: " + username + "?",
+        "Confirm Delete",
+        javax.swing.JOptionPane.YES_NO_OPTION
+);
+
+if (confirm != javax.swing.JOptionPane.YES_OPTION) {
+    return;
+}
+
+String sql = "DELETE FROM users WHERE user_id = ? AND role = 'Cashier'";
+
+try (
+    java.sql.Connection con = DBConnection.getConnection();
+    java.sql.PreparedStatement pst = con.prepareStatement(sql)
+) {
+
+    pst.setInt(1, userId);
+
+    int rowsDeleted = pst.executeUpdate();
+
+    if (rowsDeleted > 0) {
+        javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Cashier account deleted successfully!"
+        );
+
+        loadUsers();
+
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "User could not be deleted."
+        );
+    }
+
+} catch (java.sql.SQLException e) {
+
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Could not delete user:\n" + e.getMessage()
+    );
+}
+    }//GEN-LAST:event_btnDeleteUserActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        txtFullName.setText("");
+txtUsername.setText("");
+textPassword.setText("");
+cmbRole.setSelectedItem("Cashier");
+tblUsers.clearSelection();
+txtFullName.requestFocus();
+    }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        AdminDashboard dashboard = new AdminDashboard();
+dashboard.setVisible(true);
+dashboard.setLocationRelativeTo(null);
+this.dispose();
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void loadUsers() {
+
+    javax.swing.table.DefaultTableModel model =
+            new javax.swing.table.DefaultTableModel();
+
+    model.addColumn("ID");
+    model.addColumn("Full Name");
+    model.addColumn("Username");
+    model.addColumn("Role");
+
+    String sql = "SELECT user_id, full_name, username, role "
+            + "FROM users WHERE role = 'Cashier'";
+
+    try (
+        java.sql.Connection con = DBConnection.getConnection();
+        java.sql.PreparedStatement pst = con.prepareStatement(sql);
+        java.sql.ResultSet rs = pst.executeQuery()
+    ) {
+
+        while (rs.next()) {
+            model.addRow(new Object[]{
+                rs.getInt("user_id"),
+                rs.getString("full_name"),
+                rs.getString("username"),
+                rs.getString("role")
+            });
+        }
+
+        tblUsers.setModel(model);
+
+    } catch (java.sql.SQLException e) {
+
+        javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Could not load users:\n" + e.getMessage()
+        );
+    }
+}
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -70,5 +376,24 @@ public class ManageUsers extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboRole;
+    private javax.swing.JButton btnAddUser;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnDeleteUser;
+    private javax.swing.JComboBox<String> cmbRole;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblUsers;
+    private javax.swing.JTextField textPassword;
+    private javax.swing.JTextField txtFullName;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
