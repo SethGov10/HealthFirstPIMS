@@ -151,12 +151,14 @@ try (
 
     this.dispose();
 
-        } else if (role.equalsIgnoreCase("Cashier")) {
-            javax.swing.JOptionPane.showMessageDialog(
-                    this,
-                    "Cashier login successful."
-            );
-        }
+      } else if (role.equalsIgnoreCase("Cashier")) {
+
+    CashierDashboard cashierDashboard = new CashierDashboard(userId);
+    cashierDashboard.setLocationRelativeTo(null);
+    cashierDashboard.setVisible(true);
+
+    this.dispose();
+}  
 
       }   else {
 
