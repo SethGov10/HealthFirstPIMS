@@ -66,6 +66,7 @@ public class ManageMedicines extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 129, 133));
         jLabel1.setText("MEDICINE MANAGEMENT");
 
         jLabel2.setText("Medicine Name:");
@@ -88,18 +89,23 @@ public class ManageMedicines extends javax.swing.JFrame {
 
         txtQuantity.addActionListener(this::txtQuantityActionPerformed);
 
+        btnAdd.setBackground(new java.awt.Color(112, 255, 255));
         btnAdd.setText("ADD");
         btnAdd.addActionListener(this::btnAddActionPerformed);
 
+        btnUpdate.setBackground(new java.awt.Color(125, 255, 255));
         btnUpdate.setText("UPDATE");
         btnUpdate.addActionListener(this::btnUpdateActionPerformed);
 
+        btnDelete.setBackground(new java.awt.Color(130, 255, 255));
         btnDelete.setText("DELETE");
         btnDelete.addActionListener(this::btnDeleteActionPerformed);
 
+        btnClear.setBackground(new java.awt.Color(130, 255, 255));
         btnClear.setText("CLEAR");
         btnClear.addActionListener(this::btnClearActionPerformed);
 
+        btnBack.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(this::btnBackActionPerformed);
 
@@ -211,7 +217,7 @@ public class ManageMedicines extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtSupplierId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)

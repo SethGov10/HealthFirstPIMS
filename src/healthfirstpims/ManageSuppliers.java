@@ -51,8 +51,10 @@ public class ManageSuppliers extends javax.swing.JFrame {
         tblSuppliers = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         label2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label2.setForeground(new java.awt.Color(0, 135, 133));
         label2.setText("SUPPLIER MANAGEMENT");
 
         label3.setText("Supplier Name:");
@@ -73,7 +75,6 @@ public class ManageSuppliers extends javax.swing.JFrame {
         txtAddress.setName(""); // NOI18N
 
         btnAdd.setText("ADD");
-        btnAdd.setActionCommand("ADD");
         btnAdd.addActionListener(this::btnAddActionPerformed);
 
         btnUpdate.setText("UPDATE");
@@ -88,6 +89,7 @@ public class ManageSuppliers extends javax.swing.JFrame {
         btnBack.setText("BACK");
         btnBack.addActionListener(this::btnBackActionPerformed);
 
+        tblSuppliers.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 135, 128)));
         tblSuppliers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

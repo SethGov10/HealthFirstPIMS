@@ -37,8 +37,10 @@ public class LowStockReport extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 125, 133));
         jLabel1.setText("LOW STOCK REPORT");
 
+        tblLowStock.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 128, 129)));
         tblLowStock.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -52,6 +54,7 @@ public class LowStockReport extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblLowStock);
 
+        btnBack.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(this::btnBackActionPerformed);
 

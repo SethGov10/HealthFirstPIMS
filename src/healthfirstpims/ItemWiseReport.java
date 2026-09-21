@@ -38,8 +38,10 @@ public class ItemWiseReport extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 130, 136));
         jLabel2.setText("ITEM-WISE REPORT");
 
+        tblItemWise.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 137, 129)));
         tblItemWise.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -53,6 +55,7 @@ public class ItemWiseReport extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblItemWise);
 
+        btnBack.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(this::btnBackActionPerformed);
 
@@ -85,7 +88,7 @@ public class ItemWiseReport extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnBack)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();

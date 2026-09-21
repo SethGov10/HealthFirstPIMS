@@ -36,62 +36,89 @@ public class AdminDashboard extends javax.swing.JFrame {
         btnUsers = new javax.swing.JButton();
         btnReports = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("HealthFirst Pharmacy - Admin Dashboard");
+        setTitle("HealthFirst Pharmacy - Administrator");
+        setBackground(new java.awt.Color(16, 23, 43));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel2.setText("HEALTHFIRST PHARMACY");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(44, 211, 191));
         jLabel3.setText("Administrator Dashboard");
 
+        btnMedicines.setBackground(new java.awt.Color(20, 184, 166));
+        btnMedicines.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMedicines.setForeground(new java.awt.Color(255, 255, 255));
         btnMedicines.setText("Manage Medicines");
+        btnMedicines.addActionListener(this::btnMedicinesActionPerformed);
 
+        btnSuppliers.setBackground(new java.awt.Color(21, 183, 167));
+        btnSuppliers.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSuppliers.setForeground(new java.awt.Color(255, 255, 255));
         btnSuppliers.setText("Manage Suppliers");
+        btnSuppliers.addActionListener(this::btnSuppliersActionPerformed);
 
+        btnUsers.setBackground(new java.awt.Color(17, 183, 166));
+        btnUsers.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnUsers.setForeground(new java.awt.Color(255, 255, 255));
         btnUsers.setText("Manage Users");
+        btnUsers.addActionListener(this::btnUsersActionPerformed);
 
+        btnReports.setBackground(new java.awt.Color(20, 184, 166));
+        btnReports.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnReports.setForeground(new java.awt.Color(255, 255, 255));
         btnReports.setText("Reports");
         btnReports.addActionListener(this::btnReportsActionPerformed);
 
         btnLogout.setText("LOGOUT");
+
+        jLabel5.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        jLabel5.setText("Manage pharmacy inventory, users and reports");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnMedicines)
+                                .addGap(58, 58, 58)
+                                .addComponent(btnSuppliers))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(btnUsers)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnReports)
+                                .addGap(22, 22, 22))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(jLabel3)))
+                .addGap(0, 19, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(jLabel1))
+                        .addGap(144, 144, 144)
+                        .addComponent(btnLogout))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(btnMedicines)
-                                    .addGap(58, 58, 58)
-                                    .addComponent(btnSuppliers)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(15, 15, 15)
-                                    .addComponent(btnUsers)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnReports)
-                                    .addGap(23, 23, 23))))
+                            .addGap(84, 84, 84)
+                            .addComponent(jLabel4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(89, 89, 89)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(6, 6, 6)
-                                    .addComponent(jLabel3))
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(btnLogout)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                            .addGap(80, 80, 80)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,9 +126,17 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel1)
-                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSuppliers)
                     .addComponent(btnMedicines))
@@ -109,9 +144,9 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUsers)
                     .addComponent(btnReports))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(btnLogout)
-                .addGap(50, 50, 50))
+                .addGap(64, 64, 64))
         );
 
         pack();
@@ -123,6 +158,27 @@ public class AdminDashboard extends javax.swing.JFrame {
          reports.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnReportsActionPerformed
+
+    private void btnMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicinesActionPerformed
+        ManageMedicines medicines = new ManageMedicines();
+medicines.setLocationRelativeTo(null);
+medicines.setVisible(true);
+this.dispose();
+    }//GEN-LAST:event_btnMedicinesActionPerformed
+
+    private void btnSuppliersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuppliersActionPerformed
+        ManageSuppliers suppliers = new ManageSuppliers();
+       suppliers.setLocationRelativeTo(null);
+        suppliers.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btnSuppliersActionPerformed
+
+    private void btnUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsersActionPerformed
+       ManageUsers users = new ManageUsers();
+       users.setLocationRelativeTo(null);
+       users.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btnUsersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,5 +214,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

@@ -40,6 +40,7 @@ public class LoginForm extends javax.swing.JFrame {
         setTitle("HealthFirst Pharmacy - Login");
         setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
 
+        jLabel1.setForeground(new java.awt.Color(0, 137, 136));
         jLabel1.setText("HEALTHFIRST PHARMACY");
 
         jLabel2.setText("Pharmacy Inventory Management System");
@@ -47,10 +48,12 @@ public class LoginForm extends javax.swing.JFrame {
         tUsername.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tUsername.setText("Username:");
 
+        txtUsername.setBackground(new java.awt.Color(0, 128, 132));
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Password:");
 
-        txtPassword.setText("jPasswordField1");
+        txtPassword.setBackground(new java.awt.Color(0, 135, 140));
 
         btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLogin.setText("LOGIN");

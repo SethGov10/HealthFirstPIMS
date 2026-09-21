@@ -40,18 +40,25 @@ public class Reports extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("REPORTS");
 
+        btnSalesReport.setBackground(new java.awt.Color(0, 133, 139));
         btnSalesReport.setText("SALES REPORT");
         btnSalesReport.addActionListener(this::btnSalesReportActionPerformed);
 
+        btnItemWiseReport.setBackground(new java.awt.Color(0, 125, 132));
+        btnItemWiseReport.setForeground(new java.awt.Color(255, 255, 255));
         btnItemWiseReport.setText("ITEM-WISE REPORT");
         btnItemWiseReport.addActionListener(this::btnItemWiseReportActionPerformed);
 
+        btnLowStockReport.setBackground(new java.awt.Color(0, 123, 122));
         btnLowStockReport.setText("LOW STOCK REPORT");
         btnLowStockReport.addActionListener(this::btnLowStockReportActionPerformed);
 
+        btnExpiryReport.setBackground(new java.awt.Color(0, 128, 143));
+        btnExpiryReport.setForeground(new java.awt.Color(255, 255, 255));
         btnExpiryReport.setText("EXPIRY REPORT");
         btnExpiryReport.addActionListener(this::btnExpiryReportActionPerformed);
 
+        btnBack.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(this::btnBackActionPerformed);
 
@@ -86,7 +93,7 @@ public class Reports extends javax.swing.JFrame {
                 .addComponent(btnExpiryReport, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBack)
-                .addGap(0, 42, Short.MAX_VALUE))
+                .addGap(0, 41, Short.MAX_VALUE))
         );
 
         pack();

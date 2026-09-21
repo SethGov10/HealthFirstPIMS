@@ -96,6 +96,7 @@ public StockCheck(int userId) {
         btnShowAll.setText("Show All");
         btnShowAll.addActionListener(this::btnShowAllActionPerformed);
 
+        tblStock.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 149, 130)));
         tblStock.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -109,6 +110,7 @@ public StockCheck(int userId) {
         ));
         jScrollPane1.setViewportView(tblStock);
 
+        txtBack.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         txtBack.setText("BACK");
         txtBack.addActionListener(this::txtBackActionPerformed);
 
@@ -153,7 +155,7 @@ public StockCheck(int userId) {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(txtBack)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         pack();

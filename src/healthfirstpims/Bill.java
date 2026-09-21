@@ -38,7 +38,9 @@ public class Bill extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(167, 255, 164));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 139, 136));
         jLabel1.setText("CUSTOMER BILL");
 
         txtBill.setEditable(false);
@@ -46,12 +48,15 @@ public class Bill extends javax.swing.JFrame {
         txtBill.setRows(5);
         jScrollPane1.setViewportView(txtBill);
 
+        btnPrint.setForeground(new java.awt.Color(0, 137, 133));
         btnPrint.setText("PRINT");
         btnPrint.addActionListener(this::btnPrintActionPerformed);
 
+        btnSave.setForeground(new java.awt.Color(0, 135, 132));
         btnSave.setText("SAVE");
         btnSave.addActionListener(this::btnSaveActionPerformed);
 
+        btnClose.setForeground(new java.awt.Color(0, 133, 133));
         btnClose.setText("CLOSE");
         btnClose.addActionListener(this::btnCloseActionPerformed);
 
@@ -64,30 +69,29 @@ public class Bill extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(32, 32, 32)
-                            .addComponent(btnPrint)
-                            .addGap(86, 86, 86)
-                            .addComponent(btnSave)
-                            .addGap(94, 94, 94)
-                            .addComponent(btnClose))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(390, 390, 390)
-                            .addComponent(jLabel1))))
-                .addContainerGap(451, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(btnPrint)
+                        .addGap(86, 86, 86)
+                        .addComponent(btnSave)
+                        .addGap(94, 94, 94)
+                        .addComponent(btnClose))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(jLabel1)))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addGap(52, 52, 52)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(161, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnPrint)

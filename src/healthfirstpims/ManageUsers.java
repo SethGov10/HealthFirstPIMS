@@ -70,6 +70,7 @@ public class ManageUsers extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 132, 126));
         jLabel1.setText("USER MANAGEMENT");
 
         jLabel2.setText("Full Name:");
@@ -80,15 +81,19 @@ public class ManageUsers extends javax.swing.JFrame {
 
         jLabel5.setText("Role:");
 
+        btnAddUser.setBackground(new java.awt.Color(0, 125, 125));
         btnAddUser.setText("ADD USER");
         btnAddUser.addActionListener(this::btnAddUserActionPerformed);
 
+        btnDeleteUser.setBackground(new java.awt.Color(0, 130, 128));
         btnDeleteUser.setText("DELETE USER");
         btnDeleteUser.addActionListener(this::btnDeleteUserActionPerformed);
 
+        btnClear.setBackground(new java.awt.Color(0, 133, 137));
         btnClear.setText("CLEAR ");
         btnClear.addActionListener(this::btnClearActionPerformed);
 
+        btnBack.setBackground(new java.awt.Color(0, 130, 142));
         btnBack.setText("BACK");
         btnBack.addActionListener(this::btnBackActionPerformed);
 
@@ -114,7 +119,7 @@ public class ManageUsers extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnAddUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(btnDeleteUser)
                 .addGap(27, 27, 27)
                 .addComponent(btnClear)
@@ -139,11 +144,11 @@ public class ManageUsers extends javax.swing.JFrame {
                             .addComponent(textPassword)
                             .addComponent(txtFullName)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(312, 312, 312)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -173,9 +178,9 @@ public class ManageUsers extends javax.swing.JFrame {
                     .addComponent(btnClear)
                     .addComponent(btnDeleteUser)
                     .addComponent(btnAddUser))
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();

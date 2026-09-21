@@ -39,14 +39,18 @@ public CashierDashboard(int userId) {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(111, 0, 108));
         jLabel1.setText("CASHIER DASHBOARD");
 
+        btnPOS.setForeground(new java.awt.Color(0, 133, 130));
         btnPOS.setText("POINT OF SALE");
         btnPOS.addActionListener(this::btnPOSActionPerformed);
 
+        btnStockCheck.setForeground(new java.awt.Color(0, 130, 130));
         btnStockCheck.setText("STOCK CHECK");
         btnStockCheck.addActionListener(this::btnStockCheckActionPerformed);
 
+        btnLogout.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         btnLogout.setText("LOGOUT ");
         btnLogout.addActionListener(this::btnLogoutActionPerformed);
 
@@ -54,34 +58,34 @@ public CashierDashboard(int userId) {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnLogout)
+                .addGap(92, 92, 92))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jLabel1))
+                        .addGap(70, 70, 70)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPOS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnStockCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnPOS))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnStockCheck))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(btnLogout)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                        .addGap(96, 96, 96)
+                        .addComponent(jLabel1)))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(74, 74, 74)
+                .addGap(56, 56, 56)
                 .addComponent(btnPOS)
                 .addGap(18, 18, 18)
                 .addComponent(btnStockCheck)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnLogout)
-                .addGap(19, 19, 19))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         pack();
