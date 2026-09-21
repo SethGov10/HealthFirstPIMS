@@ -9,7 +9,7 @@ package healthfirstpims;
  * @author user
  */
 public class StockCheck extends javax.swing.JFrame {
-    
+    private int userId;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(StockCheck.class.getName());
 
     /**
@@ -19,7 +19,11 @@ public class StockCheck extends javax.swing.JFrame {
         initComponents();
         loadStock("");
     }
-
+public StockCheck(int userId) {
+    initComponents();
+    this.userId = userId;
+    loadStock("");
+}
     private void loadStock(String search) {
 
     javax.swing.table.DefaultTableModel model =
@@ -85,8 +89,6 @@ public class StockCheck extends javax.swing.JFrame {
         jLabel1.setText("STOCK CHECK");
 
         jLabel2.setText("Search Medicine:");
-
-        txtSearch.setText("jTextField1");
 
         btnSearch.setText("Search");
         btnSearch.addActionListener(this::btnSearchActionPerformed);
@@ -168,10 +170,10 @@ public class StockCheck extends javax.swing.JFrame {
     }//GEN-LAST:event_btnShowAllActionPerformed
 
     private void txtBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBackActionPerformed
-        CashierDashboard dashboard = new CashierDashboard();
+        CashierDashboard dashboard = new CashierDashboard(userId);
         dashboard.setLocationRelativeTo(null);
-        dashboard.setVisible(true);
-        this.dispose();
+         dashboard.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_txtBackActionPerformed
 
     /**

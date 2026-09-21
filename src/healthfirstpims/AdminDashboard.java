@@ -53,6 +53,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         btnUsers.setText("Manage Users");
 
         btnReports.setText("Reports");
+        btnReports.addActionListener(this::btnReportsActionPerformed);
 
         btnLogout.setText("LOGOUT");
 
@@ -115,6 +116,13 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnReportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportsActionPerformed
+        Reports reports = new Reports();
+        reports.setLocationRelativeTo(null);
+         reports.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnReportsActionPerformed
 
     /**
      * @param args the command line arguments

@@ -362,7 +362,7 @@ txtQuantity.setText("");
     }//GEN-LAST:event_btnClearCartActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        CashierDashboard dashboard = new CashierDashboard();
+        CashierDashboard dashboard = new CashierDashboard(userId);
 dashboard.setVisible(true);
 dashboard.setLocationRelativeTo(null);
 this.dispose();

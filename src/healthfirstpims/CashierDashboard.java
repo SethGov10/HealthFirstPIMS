@@ -102,7 +102,7 @@ this.dispose();
     }//GEN-LAST:event_btnPOSActionPerformed
 
     private void btnStockCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockCheckActionPerformed
-        StockCheck stockCheck = new StockCheck();
+     StockCheck stockCheck = new StockCheck(userId);
          stockCheck.setLocationRelativeTo(null);
         stockCheck.setVisible(true);
        this.dispose();
