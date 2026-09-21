@@ -107,11 +107,11 @@ public class LoginForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+// Get the username and password entered by the user
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
        String username = txtUsername.getText().trim();
 String password = new String(txtPassword.getPassword());
-
+// Validate that both login fields have been completed
 if (username.isEmpty() || password.isEmpty()) {
     javax.swing.JOptionPane.showMessageDialog(
             this,
@@ -121,7 +121,7 @@ if (username.isEmpty() || password.isEmpty()) {
     );
     return;
 }
-
+// Use a PreparedStatement to safely check the user's login details
 String sql = "SELECT user_id, full_name, role FROM users "
         + "WHERE username = ? AND password = ?";
 
@@ -134,7 +134,7 @@ try (
     pst.setString(2, password);
 
     java.sql.ResultSet rs = pst.executeQuery();
-
+// If the account exists, retrieve the user's ID, name and role
     if (rs.next()) {
 
         int userId = rs.getInt("user_id");
